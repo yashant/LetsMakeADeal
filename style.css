@@ -31,7 +31,8 @@ body{
     position:relative;
     width:100px;
     height:200px;
-    box-shadow:0px 0px 0px 10px #FF605C inset;
+    box-shadow:0 6px 0px 6px #FF605C inset;
+    
     margin: 0 auto;
     margin-top:50px;
   }
@@ -86,12 +87,54 @@ body{
       text-align: center;
       height: 20px;
   }
+/* ----Jump Animation------- */
+  @keyframes jump {
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+    100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+  }
+  .jump {
+    transform-origin: 50% 50%;
+    animation: jump .5s linear alternate infinite;
+  }
+/* ------Jump Animation----------- */
+
+/* ----sway Animation------- */
+/* @keyframes sway  {
+  0% { transform: rotate(16deg); }
+  50% { transform: rotate(-16deg); }
+  100% { transform: rotate(8deg); }
+}
+.sway{
+  animation: sway 1s infinite;
+  animation-timing-function: ease-in-out;
+} */
+@keyframes sway {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  75%  {transform: translate(0,-150px) scale3d(0.9,1.1,1);}
+  100% {transform: translate(0,100%,0) scale3d(1.5,.7,1);}
   
+}
+.sway {
+  transform-origin: 50% 50%;
+  animation: sway .7s linear alternate 1;
+  transform: translate3d(0,100%,0) scale3d(1.5,0.7,1);
+
+}
+
+/* ----Swing Animation------- */
+
+  .door-container{
+    width:320px;
+    margin:auto;
+  }
+
   @media only screen and (min-width: 600px) {
     .door-container{
     width:600px;
     margin:auto;
     display:flex;
+    flex-direction: row;
   }
   
   }

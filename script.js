@@ -49,20 +49,20 @@ document.querySelector(".door3").style.pointerEvents = "none";
 //Randomize winner at Document Load
 $( document ).ready(function() {  
  if (WINNER===1){
-document.querySelector(".insideDoor1").src="money.svg"
-   document.querySelector(".insideDoor2").src="fish.svg"
-   document.querySelector(".insideDoor3").src="fish.svg"
+document.querySelector(".insideDoor1").src="money.svg";
+   document.querySelector(".insideDoor2").src="fish.svg";
+   document.querySelector(".insideDoor3").src="fish.svg";
  }
  
  else if (WINNER===2){
-   document.querySelector(".insideDoor1").src="fish.svg"
-   document.querySelector(".insideDoor2").src="money.svg"
-   document.querySelector(".insideDoor3").src="fish.svg"
+   document.querySelector(".insideDoor1").src="fish.svg";
+   document.querySelector(".insideDoor2").src="money.svg";
+   document.querySelector(".insideDoor3").src="fish.svg";
  }
  else{
-   document.querySelector(".insideDoor1").src="fish.svg"
-   document.querySelector(".insideDoor2").src="fish.svg"
-   document.querySelector(".insideDoor3").src="money.svg"
+   document.querySelector(".insideDoor1").src="fish.svg";
+   document.querySelector(".insideDoor2").src="fish.svg";
+   document.querySelector(".insideDoor3").src="money.svg";
  } 
   
 });
@@ -104,12 +104,18 @@ function door1Click(){
         if (WINNER===1)
         {
             setTimeout(function() {
-                document.querySelector(".result").innerHTML="Congratulations, You Win!";}, 300);
+                document.querySelector(".result").innerHTML="Congratulations, You Win!";
+                document.querySelector(".insideDoor1").classList.add("jump")
+            }, 600);
+                ;
+            
            }
         else
         {
             setTimeout(function() {
-                document.querySelector(".result").innerHTML="You Lose! Please Try again.";}, 300);
+                document.querySelector(".result").innerHTML="You Lose! Please Try again.";
+                document.querySelector(".insideDoor1").classList.add("sway");
+            }, 600);
         }
         document.querySelector(".description-text").innerHTML="";
 
@@ -149,12 +155,18 @@ function door2Click(){
         if (WINNER===2)
         {
             setTimeout(function() {
-                document.querySelector(".result").innerHTML="Congratulations, You Win!";}, 300);
+                document.querySelector(".result").innerHTML="Congratulations, You Win!";
+                document.querySelector(".insideDoor2").classList.add("jump");
+                }, 600);
+               
+            
           }
         else
         {
             setTimeout(function() {
-                document.querySelector(".result").innerHTML="You Lose! Please Try again.";}, 300);
+                document.querySelector(".result").innerHTML="You Lose! Please Try again.";
+                document.querySelector(".insideDoor2").classList.add("sway");
+            }, 600);
           }
           document.querySelector(".description-text").innerHTML="";
 
@@ -194,13 +206,17 @@ function door3Click(){
         if (WINNER===3)
         {
             setTimeout(function() {
-                document.querySelector(".result").innerHTML="Congratulations, You Win!";}, 300);
-            
-        }
+                document.querySelector(".result").innerHTML="Congratulations, You Win!";
+                document.querySelector(".insideDoor3").classList.add("jump");
+                
+            }, 600);
+                    }
         else
         {
             setTimeout(function() {
-                document.querySelector(".result").innerHTML="You Lose! Please Try again.";}, 300);
+                document.querySelector(".result").innerHTML="You Lose! Please Try again.";
+                document.querySelector(".insideDoor3").classList.add("sway");
+            }, 600);
         }
         document.querySelector(".description-text").innerHTML="";
     }
