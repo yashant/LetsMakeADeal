@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Teko:wght@700&display=swap');
+body{
+    
+    padding:0px;
+    font-family: 'Oswald', sans-serif;
+    margin:0px;
+    background-color:#FAD3D1;
+    color:#FFECEB;
+  }
+  .top-half{
+    padding-top:0px;
+    margin-top:0px;
+    background-color:#DFA29F;
+    text-align: center;
+  }
+  .page-title{
+    font-family: 'Teko', sans-serif;
+    display: inline-block; 
+    font-size:30px;  
+    text-align:center;
+    color:#FFECEB;
+  }
+  .description-text{
+    text-align: center;
+    height:5px;
+  }
+  .backDoor
+  {
+    margin-left:40px;
+    background-color: #FFECEB;
+    position:relative;
+    width:100px;
+    height:200px;
+    box-shadow:0px 0px 0px 10px #FF605C inset;
+    margin: 0 auto;
+    margin-top:50px;
+  }
+  
+  .door
+  {
+    background-color: #FF605C;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100px;
+    height:200px;
+   
+    transform-origin: left;
+    /*Speed of the Door animation*/
+    transition: all 0.5s ease-in-out;
+  }
+  .door-knob{
+    position:absolute;
+    width:10px;
+    height:10px;
+    left: 80px;
+    top: 95px;
+    background: #FFEBA6;
+    border-radius:50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0,     0.25);
+  }
+  
+  a{
+      text-decoration: none;
+  }
+  a:visited{
+    color:#FFECEB;
+  }
+  .doorOpen
+  {
+    /*prespectiv creates the door open effect*/
+    transform: perspective(1200px) translateZ(0px) translateX(-1px) translateY(0px) rotateY(-130deg);
+  }
+  
+  .inside-door{
+      text-align:center;
+      margin-top:120px;
+  }
+  .door-container{
+    width:320px;
+    margin:auto;
+  }
+
+  .result{
+      text-align: center;
+      height: 20px;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .door-container{
+    width:600px;
+    margin:auto;
+    display:flex;
+  }
+  
+  }
+  
+  
+  
+  
