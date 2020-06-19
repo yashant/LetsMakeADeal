@@ -7,6 +7,7 @@ body{
     background-color:#FAD3D1;
     color:#FFECEB;
   }
+  
   .text-container{
     width: 90%;
     text-align: center;
@@ -29,6 +30,24 @@ body{
     text-align: center;
     height:5px;
   }
+  .play-again{
+    font-size: 1.2em;
+    display: none;
+    padding-top: 40px;
+    text-align: center;
+    color:#DFA29F;
+  }
+  .dark-color{
+    color:#DFA29F;
+  }
+
+  .dark-color:hover{
+    color:rgb(190, 133, 130);
+  }
+  .dark-color:visited{
+    color:#DFA29F;
+  }
+
   .backDoor
   {
     margin-left:40px;
