@@ -74,7 +74,7 @@ document.querySelector(".insideDoor1").src="money.svg";
 function door1Click(){
     if (numClicks === 0){
         numClicks++;
-        document.querySelector(".description-text").innerHTML="I have opened one of the losing door. Would you like to switch?"
+        document.querySelector(".description-text").innerHTML="I have opened one of the losing doors. Would you like to switch?"
         if (WINNER===2){
             openDoor=3;
         }
@@ -124,7 +124,7 @@ function door1Click(){
 function door2Click(){
     if (numClicks === 0){
         numClicks++;
-        document.querySelector(".description-text").innerHTML="I have opened one of the losing door. Would you like to switch?"
+        document.querySelector(".description-text").innerHTML="I have opened one of the losing doors. Would you like to switch?"
         
         if (WINNER===1){
             openDoor=3;
@@ -176,7 +176,7 @@ function door2Click(){
 function door3Click(){
     if (numClicks === 0){
         numClicks++;
-        document.querySelector(".description-text").innerHTML="I have opened one of the losing door. Would you like to switch?"
+        document.querySelector(".description-text").innerHTML="I have opened one of the losing doors. Would you like to switch?"
         if (WINNER===1){
             openDoor=2;
         }

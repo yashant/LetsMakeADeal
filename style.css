@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Teko:wght@700&display=swap');
-body{
-    
+
+body{    
     padding:0px;
     font-family: 'Oswald', sans-serif;
     margin:0px;
@@ -16,7 +16,7 @@ body{
   .page-title{
     font-family: 'Teko', sans-serif;
     display: inline-block; 
-    font-size:30px;  
+    font-size:1.5em;  
     text-align:center;
     color:#FFECEB;
   }
@@ -45,7 +45,7 @@ body{
     left:0px;
     width:100px;
     height:200px;
-   
+    cursor: pointer;
     transform-origin: left;
     /*Speed of the Door animation*/
     transition: all 0.5s ease-in-out;
@@ -72,15 +72,17 @@ body{
   {
     /*prespectiv creates the door open effect*/
     transform: perspective(1200px) translateZ(0px) translateX(-1px) translateY(0px) rotateY(-130deg);
+    cursor: default;
   }
   
   .inside-door{
-      text-align:center;
-      margin-top:120px;
+      text-align: center;
+      margin-top: 120px;
   }
   .door-container{
-    width:320px;
-    margin:auto;
+    width:600px;
+    margin: auto;
+    display: flex;
   }
 
   .result{
@@ -122,22 +124,54 @@ body{
 
 }
 
-/* ----Swing Animation------- */
-
+  @media only screen and (max-width: 500px) {
   .door-container{
-    width:320px;
+    width:380px;
     margin:auto;
-  }
-
-  @media only screen and (min-width: 600px) {
-    .door-container{
-    width:600px;
-    margin:auto;
-    display:flex;
-    flex-direction: row;
+ }
+  
+  .backDoor
+  {
+    margin-left:40px;
+    background-color: #FFECEB;
+    position:relative;
+    width:60px;
+    height:120px;
+    box-shadow:0 6px 0px 6px #FF605C inset;
+    
+    margin: 0 auto;
+    margin-top:50px;
   }
   
+  .door
+  {
+    background-color: #FF605C;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:60px;
+    height:120px;
+    cursor: pointer;
+    transform-origin: left;
+    /*Speed of the Door animation*/
+    transition: all 0.5s ease-in-out;
   }
+  .door-knob{
+    position:absolute;
+    width:8px;
+    height:8px;
+    left: 45px;
+    top: 55px;
+    background: #FFEBA6;
+    border-radius:50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0,     0.25);
+  }  
+  .inside-door{
+    text-align: center;
+    margin-top: 90px;
+    width: 30px;
+}
+}
   
   
   
